@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/app.css">
+
+    <title>Strong Password</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lock-logo-div">
+            <p>Lock Icon</p>
+        </div>
+        <!-- settings container -->
+        <section class="settings-container">
+            <div class="setting">
+                <label for="includeDigits">
+                    <span> Include digits</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="includeDigits" checked>
+            </div>
+            <div class="setting">
+                <label for="specialChar">
+                    <span> Include special characters</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="specialChar">
+            </div>
+            <div class="setting">
+                <label for="letterMix">
+                    <span>lowercase and uppercase letters</span>
+                    <span>note that lowercase letters will always be used</span>
+                </label>
+                <input type="checkbox" id="letterMix" checked>
+            </div>
+        </section>
+
+        <!--  character length -->
+        <section class="character-length">
+            <p> Your password will be <span id="charLengthSpan">15</span> characters long.</p>
+            <p>move the slider to adjust the length of your password</p>
+            <input type="range" id="characterLengthSlider" min="10" max="55" value="15">
+        </section>
+
+        <!-- generated password -->
+        <section class="generated-password">
+            <input type="text" id="generatedPassword" spellcheck="false">
+            <button class="copy-password" id="copyPassword">copy</button>
+            <div class="confirmation" id="confirmation">
+                <p>password copied!</p>
+            </div>
+        </section>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
